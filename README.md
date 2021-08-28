@@ -1,4 +1,4 @@
-# s3extractor ☁
+# s3extractor 
 Bash Script to extract s3 buckets from JS files of the target.
 
 - ⚙ How it works: 
@@ -10,3 +10,20 @@ Bash Script to extract s3 buckets from JS files of the target.
 # 📝
 - S3 buckets can also be found in Android Applications. My tools [APKnuke] and [APKanalyser] can extract S3 buckets from an APK
 - A misconfigured S3 bucket may lead to a Subdomain takeover
+
+# Setup 🔧
+1. Make sure you have aws cli configured. [Learn How](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+2. Check if you have the [required tools] installed
+3. Run:
+```
+git clone https://github.com/utkarsh24122/s3extractor ; cd s3extractor
+chmod +x *
+```
+
+# Usage 🎮
+``` 
+./s3extract.sh target.com 
+```
+
+# PS 🖊
+I'm working on integrating passive enumeration too by using a wordlist to bruteforce for bucket names. For such bruteforce you may use [lazys3] by [@nahamsec]
