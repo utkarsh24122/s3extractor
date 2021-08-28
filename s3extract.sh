@@ -9,14 +9,15 @@ echo ""
 mkdir $target_s3
 cd $taget_s3
 
-echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Running Subdomain Enumeration & Extracting JS files \e[0m\n"
+
+echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Running Subdomain Enumeration & Extracting JS files ... \e[0m\n"
 
 subfinder -d example.com -silent | httpx | subjs >> js1.txt
 waybackurls example.com | grep ‘.js$’ >> js2.txt
 gau -subs example.com | grep ‘.js$’ >> js3.txt
 
 
-echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Removing Duplicate Entries \e[0m\n"
+echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Removing Duplicate Entries ... \e[0m\n"
 
 cat js1.txt js2.txt js3.txt | sort -u >> JSfiles.txt
 rm js1.txt js2.txt js3.txt
@@ -44,9 +45,10 @@ echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m S3 bucket links saved in /"$target"_s3/bu
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Checking Bucket Permissions \e[0m\n"
 
+cat bucket_names.txt | xargs -I% sh -c ‘aws s3 cp test.txt s3://% 2>&1 | grep “upload” && echo “ AWS s3 bucket unauthenticated Upload permission %”’
+cat bucket_names.txt | xargs -I% sh -c ‘aws s3 rm test.txt s3://%/test.txt 2>&1 | grep “delete” && echo “ AWS s3 bucket unauthenticated Delete permission %”’
 
-
-echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m S3 bucket links saved in /"$target"_s3/bucket_names.txt \e[0m\n"
+echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Scan complete!!! Exiting... \e[0m\n"
 
 
 
