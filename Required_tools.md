@@ -1,0 +1,5 @@
+1. [subfinder](https://github.com/projectdiscovery/subfinder)
+2. [httpx](https://github.com/projectdiscovery/httpx)
+3. [subjs](https://github.com/lc/subjs)
+4. [waybackurls](https://github.com/tomnomnom/waybackurls)
+5. [gau](https://github.com/lc/gau)
