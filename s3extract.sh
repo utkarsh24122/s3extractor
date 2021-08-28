@@ -12,9 +12,9 @@ cd $taget_s3
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Running Subdomain Enumeration & Extracting JS files ... \e[0m\n"
 
-subfinder -d example.com -silent | httpx | subjs >> js1.txt
-waybackurls example.com | grep ‘.js$’ >> js2.txt
-gau -subs example.com | grep ‘.js$’ >> js3.txt
+subfinder -d $target -silent | httpx | subjs >> js1.txt
+waybackurls $target | grep ‘.js$’ >> js2.txt
+gau -subs $target | grep ‘.js$’ >> js3.txt
 
 
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Removing Duplicate Entries ... \e[0m\n"
