@@ -1,5 +1,5 @@
-# s3extractor 
-Bash Script to extract s3 buckets from JS files of the target.
+# s3extractor 🔍
+Bash Script to extract s3 buckets from JS files of the target and check their permissions.
 
 - ⚙ How it works: 
 1. Finds Subdomains of the target
@@ -13,7 +13,7 @@ Bash Script to extract s3 buckets from JS files of the target.
 
 # Setup 🔧
 1. Make sure you have aws cli configured. [Learn How](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
-2. Check if you have the [required tools] installed
+2. Check if you have the [required tools](https://github.com/utkarsh24122/s3extractor/blob/main/Required_tools.md) installed
 3. Run:
 ```
 git clone https://github.com/utkarsh24122/s3extractor ; cd s3extractor
