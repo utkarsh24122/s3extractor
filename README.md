@@ -17,7 +17,7 @@ Bash Script to extract s3 buckets from JS files of the target and check their pe
 3. Run:
 ```
 git clone https://github.com/utkarsh24122/s3extractor ; cd s3extractor
-chmod +x *
+chmod +x s3extract.sh
 ```
 
 # Usage 🎮
