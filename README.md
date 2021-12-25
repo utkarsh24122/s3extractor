@@ -8,7 +8,7 @@ Bash Script to extract s3 buckets from JS files of the target and check their pe
 4. Checks Permissions of the buckets (CRUD operations) using aws cli
 
 # 📝
-- S3 buckets can also be found in Android Applications. My tools [APKnuke](https://github.com/utkarsh24122/apknuke) and [APKanalzser](https://github.com/utkarsh24122/ApkAnalyzer) can extract S3 buckets from an APK
+- S3 buckets can also be found in Android Applications. My tools [APKnuke](https://github.com/utkarsh24122/apknuke) and [APKanalzser](https://github.com/utkarsh24122/ApkAnalyzer) can be used to extract S3 buckets from an APK
 - A misconfigured S3 bucket may lead to a Subdomain takeover
 
 # Setup 🔧
